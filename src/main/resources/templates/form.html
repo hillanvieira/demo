@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <link rel="stylesheet" type="text/css"href="form.css">
 </head>
@@ -22,5 +22,25 @@
         <button type="submit">Enviar sua mensagem</button>
     </div>
 </form>
+
+<table>
+    <thead>
+    <tr>
+        <th> Mensagens dos usuarios </th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${contato.empty}">
+        <td colspan="2"> sem menssagens </td>
+    </tr>
+    <tr th:each="cont : ${contato}">
+        <td><span th:text="${cont.name}"> nome </span></td>
+        <td><span th:text="${cont.mail}"> email </span></td>
+        <td><span th:text="${cont.message}"> messagem </span></td>
+    </tr>
+    </tbody>
+</table>
+
 </body>
 </html>
