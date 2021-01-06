@@ -21,14 +21,16 @@ public class MainController {
     @GetMapping("/main")
     public String main(Model model){
         model.addAttribute("contato", formService.listar());
+
         return "form";
     }
 
     @PostMapping("/send-form")
-    public String msg(Contato contato){
+    public String msg(Contato contato,Model model){
         formService.salvar(contato);
+        model.addAttribute("contato", formService.listar());
         LOGGER.log(Level.WARNING, contato.toString());
-        return "/main";
+        return "form";
     }
 
 }
