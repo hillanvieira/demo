@@ -18,7 +18,13 @@ public class MainController {
     private FormService formService;
     private static Logger LOGGER = Logger.getLogger(MainController.class.getName());
 
-    @GetMapping("/main")
+    @GetMapping("/")
+    public String index(){
+        return "index";
+    }
+
+
+    @GetMapping("/contato")
     public String main(Model model){
         model.addAttribute("contato", formService.listar());
 
@@ -30,7 +36,7 @@ public class MainController {
         formService.salvar(contato);
         model.addAttribute("contato", formService.listar());
         LOGGER.log(Level.WARNING, contato.toString());
-        return "form";
+        return "index";
     }
 
 }

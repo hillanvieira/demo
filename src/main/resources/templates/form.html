@@ -1,10 +1,65 @@
 <!doctype html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+    <link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet" type="text/css">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      body {
+  padding-top: 5rem;
+}
+    </style>
 </head>
 <body>
-<div class="container">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">H2A</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item active">
+                    <a class="nav-link" aria-current="page" href="/">Home</a>
+                </li>
+                <!--<li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>-->
+                <!-- <li class="nav-item">
+                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                 </li>-->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                        <li><a class="dropdown-item" href="/contato">Contato</a></li>
+                        <!-- <li><a class="dropdown-item" href="#">Another action</a></li>
+                         <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+                    </ul>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<main class="container">
     <div class="container mb3">
         <div class="row">
             <div class="col"></div>
@@ -12,14 +67,14 @@
                 <form action="/send-form" method="post">
                     <div class="mb-3">
                         <label for="nome">Nome:</label>
-                        <input type="text" class="form-control" id="nome" name="name" placeholder="nome">
+                        <input class="form-control" id="nome" name="name" placeholder="nome" type="text">
                     </div>
                     <div class="mb-3">
                         <label for="email">E-mail:</label>
-                        <input type="email" class="form-control" id="email" name="mail" placeholder="name@example.com">
+                        <input class="form-control" id="email" name="mail" placeholder="name@example.com" type="email">
                     </div>
                     <div class="mb-3">
-                        <label for="msg" class="form-label">Mensagem:</label>
+                        <label class="form-label" for="msg">Mensagem:</label>
                         <textarea class="form-control" id="msg" name="message" rows="3"></textarea>
                     </div>
                     <div class="button">
@@ -30,7 +85,7 @@
             <div class="col"></div>
         </div>
     </div>
-    <div class="p-3"> </div>
+    <div class="p-3"></div>
     <div class="container bg-light mb3">
         <table class="table">
             <thead>
@@ -52,7 +107,7 @@
             </tbody>
         </table>
     </div>
-</div>
-<script src="/bootstrap/js/bootstrap.min.js"></script>
+</main>
+<script th:src="@{/bootstrap/js/bootstrap.bundle.min.js}"></script>
 </body>
 </html>
