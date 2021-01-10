@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
 
     <style>
       .bd-placeholder-img {
@@ -22,6 +22,7 @@
   padding-top: 5rem;
 }
     </style>
+
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
@@ -58,8 +59,7 @@
         </div>
     </div>
 </nav>
-
-<main class="container">
+<div class="container">
     <div class="container mb3">
         <div class="row">
             <div class="col"></div>
@@ -67,14 +67,14 @@
                 <form action="/send-form" method="post">
                     <div class="mb-3">
                         <label for="nome">Nome:</label>
-                        <input class="form-control" id="nome" name="name" placeholder="nome" type="text">
+                        <input type="text" class="form-control" id="nome" name="name" placeholder="nome">
                     </div>
                     <div class="mb-3">
                         <label for="email">E-mail:</label>
-                        <input class="form-control" id="email" name="mail" placeholder="name@example.com" type="email">
+                        <input type="email" class="form-control" id="email" name="mail" placeholder="name@example.com">
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" for="msg">Mensagem:</label>
+                        <label for="msg" class="form-label">Mensagem:</label>
                         <textarea class="form-control" id="msg" name="message" rows="3"></textarea>
                     </div>
                     <div class="button">
@@ -85,7 +85,7 @@
             <div class="col"></div>
         </div>
     </div>
-    <div class="p-3"></div>
+    <div class="p-3"> </div>
     <div class="container bg-light mb3">
         <table class="table">
             <thead>
@@ -107,7 +107,7 @@
             </tbody>
         </table>
     </div>
-</main>
-<script th:src="@{/bootstrap/js/bootstrap.bundle.min.js}"></script>
+</div>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
