@@ -18,7 +18,13 @@ public class MainController {
     private FormService formService;
     private static Logger LOGGER = Logger.getLogger(MainController.class.getName());
 
-    @GetMapping("/main")
+    @GetMapping("/")
+    public String index(){
+        return "index";
+    }
+
+
+    @GetMapping("/contato")
     public String main(Model model){
         model.addAttribute("contato", formService.listar());
 
