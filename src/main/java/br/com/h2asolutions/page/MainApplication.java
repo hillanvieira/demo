@@ -1,4 +1,4 @@
-package br.com.hello.demo;
+package br.com.h2asolutions.page;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

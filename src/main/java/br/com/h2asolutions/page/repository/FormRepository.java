@@ -1,6 +1,6 @@
-package br.com.hello.demo.repository;
+package br.com.h2asolutions.page.repository;
 
-import br.com.hello.demo.model.Contato;
+import br.com.h2asolutions.page.model.Contato;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

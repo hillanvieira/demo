@@ -1,7 +1,7 @@
-package br.com.hello.demo.controller;
+package br.com.h2asolutions.page.controller;
 
-import br.com.hello.demo.model.Contato;
-import br.com.hello.demo.service.FormService;
+import br.com.h2asolutions.page.model.Contato;
+import br.com.h2asolutions.page.service.FormService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

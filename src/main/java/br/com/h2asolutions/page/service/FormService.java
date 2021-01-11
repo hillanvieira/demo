@@ -1,7 +1,7 @@
-package br.com.hello.demo.service;
+package br.com.h2asolutions.page.service;
 
-import br.com.hello.demo.model.Contato;
-import br.com.hello.demo.repository.FormRepository;
+import br.com.h2asolutions.page.model.Contato;
+import br.com.h2asolutions.page.repository.FormRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

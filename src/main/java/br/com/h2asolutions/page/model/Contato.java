@@ -1,4 +1,4 @@
-package br.com.hello.demo.model;
+package br.com.h2asolutions.page.model;
 
 import javax.persistence.*;
 import java.util.Objects;
