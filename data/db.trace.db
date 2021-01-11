@@ -1,6 +1,0 @@
-2021-01-07 21:39:55 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CONTATO" not found; SQL statement:
-select contato0_.id as id1_0_, contato0_.mail as mail2_0_, contato0_.message as message3_0_, contato0_.name as name4_0_ from contato contato0_ [42102-200]
-2021-01-07 21:39:58 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CONTATO" not found; SQL statement:
-select contato0_.id as id1_0_, contato0_.mail as mail2_0_, contato0_.message as message3_0_, contato0_.name as name4_0_ from contato contato0_ [42102-200]
