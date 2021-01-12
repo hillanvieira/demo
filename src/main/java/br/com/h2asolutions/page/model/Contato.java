@@ -1,25 +1,20 @@
 package br.com.h2asolutions.page.model;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.*;
 import java.util.Objects;
 
-@Entity
+
+@Document
 public class Contato {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @Column
+    private String id;
     private String name;
-
-    @Column
     private String mail;
-
-    @Column
     private String message;
 
-    public Contato(Long id, String name, String mail, String message) {
+    public Contato(String id, String name, String mail, String message) {
         this.id = id;
         this.name = name;
         this.mail = mail;
@@ -30,11 +25,11 @@ public class Contato {
 
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -65,9 +60,9 @@ public class Contato {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof Contato)) return false;
         Contato contato = (Contato) o;
-        return id == contato.id && name.equals(contato.name) && mail.equals(contato.mail) && message.equals(contato.message);
+        return Objects.equals(id, contato.id) && Objects.equals(name, contato.name) && Objects.equals(mail, contato.mail) && Objects.equals(message, contato.message);
     }
 
     @Override

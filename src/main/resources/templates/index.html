@@ -6,11 +6,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="generator" content="">
-    <title>Starter Template · Bootstrap v5.0</title>
+    <title>H2A Solutions</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/starter-template/">
-
-
 
     <!-- Bootstrap core CSS -->
     <link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet" type="text/css">
@@ -37,7 +35,7 @@
 
 
 </head>
-<body>
+<body class="bg-light">
 
 <!--insert navbar tempalte-->
 <div th:replace="fragments/header :: header"></div>
@@ -49,6 +47,39 @@
         <h1>H2A Solutions</h1>
         <p class="lead">Soluções inteligentes para sua vida.<br> Sistemas personalizados.</p>
     </div>
+
+    <div class="py-5" >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <div class="col">
+                        <form action="/send-form" method="post">
+                            <h1 class="display-4" >Contato</h1>
+                            <div class="mb-3">
+                                <label for="nome">Nome:</label>
+                                <input type="text" class="form-control" id="nome" name="name" placeholder="nome">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email">E-mail:</label>
+                                <input type="email" class="form-control" id="email" name="mail" placeholder="name@example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="msg" class="form-label">Mensagem:</label>
+                                <textarea class="form-control" id="msg" name="message" rows="3"></textarea>
+                            </div>
+                            <div class="button">
+                                <button class="btn btn-primary" type="submit">Enviar sua mensagem</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </div>
+
+
 
 </main><!-- /.container -->
 

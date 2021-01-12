@@ -24,19 +24,18 @@ public class MainController {
     }
 
 
-    @GetMapping("/contato")
+    @GetMapping("/adminarea")
     public String main(Model model) {
         model.addAttribute("contato", formService.listar());
 
-        return "form";
+        return "messages";
     }
 
     @PostMapping("/send-form")
     public String msg(Contato contato, Model model) {
         formService.salvar(contato);
         model.addAttribute("contato", formService.listar());
-        LOGGER.log(Level.WARNING, contato.toString());
+        LOGGER.info(contato.toString());
         return "index";
     }
-
 }
