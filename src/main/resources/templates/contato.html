@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layout}" xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8">
+        <title>H2A Solutions | Contato</title>
+    </head>
+    <body>
+    <div class="py-5" layout:fragment="body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <div class="col">
+                            <form th:action="@{/contato}" method="post">
+                                <h1 class="display-4" >Contato</h1>
+                                <div class="mb-3">
+                                    <label for="nome">Nome:</label>
+                                    <input type="text" class="form-control" id="nome" name="name" placeholder="nome">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email">E-mail:</label>
+                                    <input type="email" class="form-control" id="email" name="mail" placeholder="name@example.com">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="msg" class="form-label">Mensagem:</label>
+                                    <textarea class="form-control" id="msg" name="message" rows="3"></textarea>
+                                </div>
+                                <div class="button">
+                                    <button class="btn btn-primary" type="submit">Enviar sua mensagem</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

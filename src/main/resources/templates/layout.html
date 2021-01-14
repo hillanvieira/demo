@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="web, sites, soluções, TI, página web, criação de site, web page" />
+        <meta name="author" content="H2A Solutions" />
+        <title>Título</title>
+
+        <!-- CSS CDN Bootstrap -->
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/starter-template/">
+
+        <!-- Bootstrap core CSS -->
+        <link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet" type="text/css">
+
+        <!-- CSS File Default -->
+        <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css">
+
+        <!-- CSS File Reset Default -->
+        <link th:href="@{/css/reset.css}" rel="stylesheet" type="text/css">
+
+        <script th:src="@{/bootstrap/js/bootstrap.bundle.min.js}"></script>
+
+    </head>
+    <body>
+        <header th:replace="fragments/header :: header">
+            <nav>
+                <div>
+                    header
+                </div>
+            </nav>
+        </header>
+
+        <div layout:fragment="body">
+            <div>
+                conteúdo do corpo da página
+            </div>
+        </div>
+
+        <footer th:replace="fragments/footer :: footer">
+            <div>
+                footer
+            </div>
+        </footer>
+    </body>
+</html>

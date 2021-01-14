@@ -1,28 +1,34 @@
 package br.com.h2asolutions.page.model;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import java.io.Serializable;
 import java.util.Objects;
 
-
-@Document
-public class Contato {
+@Table
+@Entity
+public class Contato implements Serializable {
 
     @Id
     private String id;
+
+    @Column(length = 30, nullable = false)
     private String name;
+
+    @Column(length = 30, nullable = false, unique = true)
     private String mail;
+
     private String message;
+
+    public Contato() {}
 
     public Contato(String id, String name, String mail, String message) {
         this.id = id;
         this.name = name;
         this.mail = mail;
         this.message = message;
-    }
-
-    public Contato() {
-
     }
 
     public String getId() {
