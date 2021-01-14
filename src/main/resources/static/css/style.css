@@ -1,0 +1,30 @@
+.navbar {
+	/*height: 10%;*/
+}
+
+.navbar-item-text {
+	float: right;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    padding-top: 4rem;
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+}

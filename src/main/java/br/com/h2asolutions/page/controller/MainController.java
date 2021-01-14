@@ -16,6 +16,7 @@ public class MainController {
 
     @Autowired
     private FormService formService;
+
     private static Logger LOGGER = Logger.getLogger(MainController.class.getName());
 
     @GetMapping("/")
@@ -23,15 +24,33 @@ public class MainController {
         return "index";
     }
 
-
-    @GetMapping("/adminarea")
-    public String main(Model model) {
-        model.addAttribute("contato", formService.listar());
-
-        return "messages";
+    /*
+     Pensar no caso da página de login. Faz o usuário pensar que deve cadastrar seus dados, não sendo para este fim.
+     Pode ser planejado nesta página uma consulta de cpf que já deve existir na base de dados
+     Fazendo com que só entre quem já estiver registrado, assim sendo, apenas Admin.
+     */
+    @GetMapping("/login")
+    public String login() {
+        return "login";
     }
 
-    @PostMapping("/send-form")
+    @GetMapping("/sobre")
+    public String sobre(Model model) {
+        return "sobre";
+    }
+
+    @GetMapping("/contato")
+    public String contato() {
+        return "contato";
+    }
+
+    /*@GetMapping("/admin/home")
+    public String admin(Model model) {
+        model.addAttribute("contato", formService.listar());
+        return "messages";
+    }*/
+
+    @PostMapping("/contato")
     public String msg(Contato contato, Model model) {
         formService.salvar(contato);
         model.addAttribute("contato", formService.listar());
