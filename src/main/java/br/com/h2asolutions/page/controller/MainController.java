@@ -44,17 +44,19 @@ public class MainController {
         return "contato";
     }
 
-    /*@GetMapping("/admin/home")
+    @GetMapping("/admin/home")
     public String admin(Model model) {
         model.addAttribute("contato", formService.listar());
         return "messages";
-    }*/
+    }
 
-    @PostMapping("/contato")
+    @PostMapping("/message")
     public String msg(Contato contato, Model model) {
-        formService.salvar(contato);
+
         model.addAttribute("contato", formService.listar());
         LOGGER.info(contato.toString());
+        formService.salvar(contato);
+
         return "index";
     }
 }

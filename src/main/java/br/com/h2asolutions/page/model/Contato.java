@@ -1,9 +1,6 @@
 package br.com.h2asolutions.page.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -12,30 +9,31 @@ import java.util.Objects;
 public class Contato implements Serializable {
 
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(length = 30, nullable = false)
     private String name;
 
-    @Column(length = 30, nullable = false, unique = true)
+    @Column(length = 30, nullable = false)
     private String mail;
 
     private String message;
 
     public Contato() {}
 
-    public Contato(String id, String name, String mail, String message) {
+    public Contato(Long id, String name, String mail, String message) {
         this.id = id;
         this.name = name;
         this.mail = mail;
         this.message = message;
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

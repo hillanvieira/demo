@@ -78,14 +78,14 @@
 			<groupId>nz.net.ultraq.thymeleaf</groupId>
 			<artifactId>thymeleaf-layout-dialect</artifactId>
 		</dependency>
+
 	</dependencies>
 
 	<build>
-		<!-- Ativação de profile default solicitado no console -->
+
 		<resources>
 			<resource>
-				<directory>src/main/resources</directory>
-				<filtering>true</filtering>
+				<directory>./src/main/resources</directory>
 			</resource>
 		</resources>
 
@@ -95,5 +95,6 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+
 	</build>
 </project>
