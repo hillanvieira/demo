@@ -14,10 +14,6 @@
 	<name>h2a_page</name>
 	<description>H2A Solutions web page</description>
 
-		<properties>
-			<start-class>br/com/h2asolutions/page/MainApplication.java</start-class>
-		</properties>
-
 	<dependencies>
 
 		<dependency>
@@ -73,6 +69,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
 		</dependency>-->
+
 
 		<dependency>
 			<groupId>com.h2database</groupId>
