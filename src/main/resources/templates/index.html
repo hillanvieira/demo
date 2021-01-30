@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html layout:decorate="~{layout}" xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}">
     <head>
         <title>H2A Solutions</title>
     </head>
@@ -12,5 +13,6 @@
                 <h6 class="lead">Soluções inteligentes para sua vida.<br> Sistemas personalizados.</h6>
             </div>
         </div>
+        <script th:src="@{/bootstrap/js/bootstrap.bundle.min.js}"></script>
     </body>
 </html>
